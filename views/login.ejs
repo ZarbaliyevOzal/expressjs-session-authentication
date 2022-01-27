@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Login </title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="form_wrapper">
+    <div class="form_container">
+      <div class="title_container">
+        <h2>Login</h2>
+      </div>
+      <div class="row clearfix">
+        <ul>
+          <% for (let i = 0; i < errors.length; i++) { %>
+            <li><%= errors[i] %></li>
+          <% } %>
+        </ul>
+        <div class="">
+          <form action="/login" method="POST">
+            <input type="hidden" name="_csrf" value="<%= _csrf %>">
+            <div class="input_field">
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="input_field">
+              <input type="password" name="password" placeholder="Password" required />
+            </div>
+            <div style="padding: 5px 0; display: flex; align-items: center; justify-content: center;">
+              <a href="/register">or register</a>
+            </div>
+            <input class="button" type="submit" value="Login" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

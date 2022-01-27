@@ -1,0 +1,7 @@
+POST http://localhost:5000/test?query=200
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Ozal Zarbaliyev"
+}
