@@ -6,3 +6,8 @@ install using npm
 ```shell
 $ npm install
 ```
+
+## RUN application
+```shell
+$ npm run dev
+```
